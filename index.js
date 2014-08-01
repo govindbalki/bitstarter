@@ -1,8 +1,7 @@
 var express = require('express');
 var app = express();
 
-var l_text = fs.readFileSync('index.html','utf8');
-var buf = new Buffer(l_text);
+var buf = new Buffer(fs.readFileSync('index.html','utf8'));
 
 app.set('port', (process.env.PORT || 5000));
 app.use(express.static(__dirname + '/public'));
