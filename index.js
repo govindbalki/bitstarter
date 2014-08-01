@@ -1,7 +1,11 @@
 var express = require('express');
 var app = express();
 
-var buf = new Buffer('Testing it');
+
+var fs = require('fs');
+var file = fs.readFileSync('index.html', "utf8");
+
+var buf = new Buffer(file);
 
 app.set('port', (process.env.PORT || 5000));
 app.use(express.static(__dirname + '/public'));
