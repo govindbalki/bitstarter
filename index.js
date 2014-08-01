@@ -1,4 +1,4 @@
-1;2cvar express = require('express')
+var express = require('express')
 var app = express();
 
 var l_text = fs.readFileSync('index.html','utf8');
